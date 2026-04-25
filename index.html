@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$1 Roblox Game Maker - PayPal/CashApp</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fab fa-roblox"></i>
+                    <span>$1 Game Maker</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1><span class="dollar">$1</span> Custom Roblox Games!</h1>
+            <p>Pay → Submit idea → I build in 24hrs!</p>
+            <div class="payment-methods">
+                <div class="payment-option paypal">
+                    <i class="fab fa-paypal"></i>
+                    <div>$1 to <strong>yourpaypal@email.com</strong></div>
+                </div>
+                <div class="payment-option cashapp">
+                    <i class="fab fa-cash-register"></i>
+                    <div>$1 to <strong>$YourCashApp</strong></div>
+                </div>
+            </div>
+            <button class="btn-primary" onclick="scrollToForm()">I Paid → Submit Order</button>
+        </div>
+    </section>
+
+    <section id="order" class="order-section">
+        <div class="container">
+            <h2>✅ Order Form (After Payment)</h2>
+            <form id="gameForm" class="order-form">
+                <div class="form-group">
+                    <label>Proof of Payment</label>
+                    <input type="text" id="proof" placeholder="Transaction ID / Screenshot link" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Discord Username</label>
+                        <input type="text" id="discord" placeholder="YourDiscord#1234" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Payment Method Used</label>
+                        <select id="paymentMethod" required>
+                            <option value="">Select...</option>
+                            <option value="PayPal">PayPal</option>
+                            <option value="CashApp">CashApp</option>
+                            <option value="Venmo">Venmo</option>
+                            <option value="Robux">Robux (10R$)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Game Title</label>
+                    <input type="text" id="title" placeholder="e.g. Ultimate Obby 2024">
+                </div>
+
+                <div class="form-group">
+                    <label>Game Type</label>
+                    <div class="checkbox-grid">
+                        <label><input type="checkbox" value="Obby"> 🏃‍♂️ Obby</label>
+                        <label><input type="checkbox" value="Tycoon"> 💰 Tycoon</label>
+                        <label><input type="checkbox" value="Fighting"> ⚔️ Fighting</label>
+                        <label><input type="checkbox" value="Pets"> 🐾 Pet Sim</label>
+                        <label><input type="checkbox" value="Racing"> 🚗 Racing</label>
+                        <label><input type="checkbox" value="Other"> ✨ Other</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Full Game Description <span style="color: #ff6b6b;">(DETAILED)</span></label>
+                    <textarea id="description" rows="8" placeholder="Be SPECIFIC!
+Example: 
+'50 stage obby with:
+- Ice, lava, wind stages
+- Checkpoints every 5 stages  
+- Leaderboards
+- VIP teleporter
+- Modern mobile GUI
+- Kill parts + respawn'" required></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary full-width">
+                    <i class="fas fa-paper-plane"></i> Send Order to Developer
+                </button>
+            </form>
+            <div id="success-message" class="success-message" style="display: none;">
+                <i class="fas fa-check-circle"></i>
+                <h3>✅ Order Sent Successfully!</h3>
+                <p>Check your Discord DMs - Game building started! 🚀</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p><strong>PayPal:</strong> yourpaypal@email.com | <strong>CashApp:</strong> $YourCashApp<br>
+        Games delivered in 24-48hrs • 100% satisfaction or refund! 🎮</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
