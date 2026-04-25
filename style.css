@@ -1,0 +1,241 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(135deg, #00bfff, #0099cc);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo i { 
+    font-size: 2rem; 
+    margin-right: 12px; 
+    color: #ffd700; 
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 120px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.dollar {
+    color: #ffd700;
+    text-shadow: 0 0 30px rgba(255,215,0,0.8);
+    font-size: 5rem;
+}
+
+.hero p { 
+    font-size: 1.4rem; 
+    margin-bottom: 3rem;
+    opacity: 0.95;
+}
+
+.payment-methods {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.payment-option {
+    background: rgba(255,255,255,0.2);
+    padding: 2rem 2.5rem;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.3);
+    transition: all 0.3s;
+    min-width: 220px;
+}
+
+.payment-option:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    border-color: #ffd700;
+}
+
+.payment-option i {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.paypal i { color: #0070ba; }
+.cashapp i { color: #00d46a; }
+
+.btn-primary {
+    background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+    color: white;
+    padding: 20px 50px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 10px 30px rgba(255,107,107,0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(255,107,107,0.6);
+}
+
+.full-width { width: 100%; }
+
+/* Order Section */
+.order-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.order-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+}
+
+.order-form {
+    background: white;
+    padding: 3rem;
+    border-radius: 25px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 16px 20px;
+    border: 2px solid #e9ecef;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s;
+    font-family: inherit;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #00bfff;
+    box-shadow: 0 0 0 4px rgba(0,191,255,0.1);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+
+.checkbox-grid label {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    cursor: pointer;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    border: 2px solid #e9ecef;
+    transition: all 0.3s;
+}
+
+.checkbox-grid label:hover {
+    background: #e3f2fd;
+    border-color: #00bfff;
+}
+
+.checkbox-grid input[type="checkbox"] {
+    width: auto;
+    transform: scale(1.3);
+}
+
+.success-message {
+    background: linear-gradient(45deg, #00bfff, #0099cc);
+    color: white;
+    padding: 3rem;
+    border-radius: 25px;
+    text-align: center;
+    margin-top: 2rem;
+    box-shadow: 0 20px 60px rgba(0,191,255,0.4);
+}
+
+.success-message i {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.1rem;
+}
+
+footer strong { color: #ffd700; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.8rem; }
+    .dollar { font-size: 3.5rem; }
+    .payment-methods { flex-direction: column; align-items: center; }
+    .form-row { grid-template-columns: 1fr; }
+    .order-form { padding: 2rem 1.5rem; }
+}
